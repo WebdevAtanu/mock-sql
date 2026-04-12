@@ -219,16 +219,28 @@ export default function TableBuilder() {
                             </div>
 
                             {/* Columns */}
-                            <div className="space-y-3 max-h-50 overflow-y-auto rounded border border-slate-200 bg-slate-50 p-3">
-                                {columns.map((col, index) => (
-                                    <Form
-                                        key={index}
-                                        column={col}
-                                        index={index}
-                                        updateColumn={updateColumn}
-                                        removeColumn={removeColumn}
-                                    />
-                                ))}
+                            <div className="max-h-50 overflow-y-auto rounded border border-slate-200 bg-slate-50 p-2">
+                                <table className="w-full border-collapse text-sm">
+                                    <thead>
+                                        <tr className="border-b border-slate-200 text-slate-600">
+                                            <th className="p-1 text-left uppercase text-xs">Column Name</th>
+                                            <th className="p-1 text-left uppercase text-xs">Type</th>
+                                            <th className="p-1 text-left uppercase text-xs">Remove</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        {columns.map((col, index) => (
+                                            <Form
+                                                key={index}
+                                                column={col}
+                                                index={index}
+                                                updateColumn={updateColumn}
+                                                removeColumn={removeColumn}
+                                            />
+                                        ))}
+                                    </tbody>
+                                </table>
                             </div>
 
                             {/* Generate */}
