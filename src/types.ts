@@ -6,6 +6,7 @@ export type ColumnType =
   | "BOOLEAN"
   | "UUID"
   | "EMAIL"
+  | "ADDRESS"
   | "PHONE";
 
 export interface Column {

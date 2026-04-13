@@ -8,6 +8,7 @@ const COLUMN_TYPES: ColumnType[] = [
     'BOOLEAN',
     'UUID',
     'EMAIL',
+    'ADDRESS',
     'PHONE',
 ];
 

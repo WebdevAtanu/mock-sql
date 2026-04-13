@@ -26,6 +26,9 @@ const generateValue = (type: ColumnType): string => {
 
     case "UUID":
       return `'${faker.string.uuid()}'`;
+    
+    case "ADDRESS":
+      return `'${faker.location.streetAddress()}'`;
 
     default:
       return "NULL";
